@@ -36,7 +36,7 @@
 .header {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/sources/img/banner-bg.jpg");
+  background-image: url("sources/img/banner-bg.jpg");
   background-color: #000000;
   position: relative;
   padding: 35px;
@@ -318,7 +318,7 @@
   background-repeat: no-repeat;
   background-size: 18px 18px;
   background-position: center center;
-  background-image: url("/sources/svg/search.svg");
+  background-image: url("sources/svg/search.svg");
   cursor: pointer;
 }
 
@@ -468,23 +468,23 @@
 }
 
 .twitter-pic {
-  background-image: url("/sources/svg/004-twitter.svg");
+  background-image: url("sources/svg/004-twitter.svg");
 }
 
 .pinterest-pic {
-  background-image: url("/sources/svg/001-pinterest.svg");
+  background-image: url("sources/svg/001-pinterest.svg");
 }
 
 .facebook-pic {
-  background-image: url("/sources/svg/002-facebook-logo.svg");
+  background-image: url("sources/svg/002-facebook-logo.svg");
 }
 
 .instagram-pic {
-  background-image: url("/sources/svg/005-instagram.svg");
+  background-image: url("sources/svg/005-instagram.svg");
 }
 
 .tumblr-pic {
-  background-image: url("/sources/svg/003-tumblr.svg");
+  background-image: url("sources/svg/003-tumblr.svg");
 }
 
 .copyright {
