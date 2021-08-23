@@ -31,6 +31,111 @@
   display: block;
 }
 
+/*====== MOBILE ======*/
+
+/*====== TABLET ======*/
+
+@media (min-width: 641px) and (max-width: 1199px) {
+
+  .trends-container {
+    flex-wrap: wrap;
+  }
+
+  .trends-box {
+    width: 49%;
+    margin-bottom: 4px;
+  }
+
+  .trends-box {
+    min-height: 246px;
+  }
+
+  .trends-title {
+    font-size: 17px;
+  }
+
+  .article {
+    flex-direction: column;
+    border-bottom: 3px solid #eeeeee;
+    margin-bottom: 40px;
+  }
+
+  .page-content-wrapper {
+    padding: 0 35px;
+  }
+
+  main {
+    width: 55.87%;
+  }
+
+  .article-text {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .tag-list {
+    margin-top: 15px;
+  }
+
+  .shop {
+    padding: 0 35px;
+  }
+
+  .product{
+    width: 43%;
+    /* margin-left: 3.3%;
+    margin-right: 3.3%; */
+  }
+  
+  .footer {
+    padding: 0 35px;
+  }
+}
+
+
+/*====== DESKTOP ======*/
+
+@media (min-width: 1200px) {
+ 
+  .trends-box {
+    width: 25%;
+  }
+
+  .trends-box {
+    min-height: 320px;
+  }
+
+  .trends-title {
+    font-size: 20px;
+  }
+
+  .page-content-wrapper {
+    padding: 0 15px;
+  }
+
+  .article {
+    margin-bottom: 55px;
+  }
+
+  .article-text {
+    margin-top: 55px;
+  }
+
+  .shop {
+    padding: 0 15px;
+  }
+
+  .product {
+    width: 26.6%;
+    margin-left: 2%;
+    margin-right: 2%; 
+  }
+
+  .footer {
+    padding: 0 15px;
+  }
+
+}
 /*====== HEADER ======*/
 
 .header {
@@ -54,7 +159,7 @@
 }
 
 .header-wrapper {
-  width: 1200px;
+  max-width: 1200px;
   padding: 0 15px;
   margin: auto;
   z-index: 1;
@@ -141,12 +246,11 @@
 }
 
 .trends-box {
-  padding-bottom: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 15px 20px;
   position: relative;
-  width: 25%;
   display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #eff6f1;
@@ -169,8 +273,6 @@
   position: relative;
   z-index: 1;
   padding: 37px 34px;
-  margin-top: 35%;
-  align-self: flex-end;
 }
 
 .trends-box:not(:last-child) {
@@ -194,9 +296,8 @@
 }
 
 .trends-title {
-  font-family: Open-Sans, sans-serif;
-  font-size: 20px;
   line-height: 1.2;
+  font-family: Open-Sans, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -219,19 +320,17 @@
 
 .page-content-wrapper {
   max-width: 1200px;
-  padding: 0 15px;
   margin: auto;
   display: flex;
   justify-content: space-between;
 }
 
 .main {
-  width: 780px;
+  max-width: 780px;
 }
 
 .article {
   display: flex;
-  margin-bottom: 55px;
 }
 
 .article:last-child {
@@ -306,10 +405,6 @@
   font-size: 12px;
   text-decoration: none;
   font-weight: bold;
-}
-
-.article-text {
-  margin-top: 55px;
 }
 
 .article-paragraph {
@@ -531,42 +626,54 @@
 
 .shop {
   max-width: 1200px;
-  padding: 0 15px;
   margin: auto;
   margin-top: 64px;
-  margin-bottom: 64px;
+  margin-bottom: 34px;
 }
 
 .products {
-  display: flex;
-  flex-wrap: wrap;
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .product {
-  width: 300px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
 }
 
 .product-body {
-  outline: 3px solid rgba(181, 159, 91, 0.6);
-  outline-offset: 21px;
-  position: relative;
-  top: -33px; 
   display: flex;
   flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-bottom: 43px;
+  flex-grow: 1;
 }
 
+
+
+.product-body::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  outline: 3px solid rgba(181, 159, 91, 0.6);
+  outline-offset: 20px;
+  top: -23px;
+  position: absolute;
+} 
+
 .product-content {
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .product-pic {
-  display: flex;
-  width: 300px;
-  margin-bottom: 24px;
-  background-color: green;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .product-header {
@@ -660,8 +767,7 @@
 /*====== FOOTER ======*/
 
 .footer {
-  width: 1200px;
-  padding: 0 15px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
