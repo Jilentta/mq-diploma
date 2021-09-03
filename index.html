@@ -13,6 +13,9 @@
           <div class="main-header">
               <a href="/" class="logo"><img class="image" src="sources/svg/noemi-logo.svg" alt="Логотип" width="180"></a>
               <nav>
+                  <button class="menu-button">
+                    <span class="menu-button-label">открыть меню</span>
+                  </button>
                 <ul class="menu-list">
                 <li class="menu-list-item"><a href="#" class="menu-link">Главная</a></li>
                 <li class="menu-list-item"><a href="#" class="menu-link">Посты</a></li>
@@ -22,7 +25,8 @@
                 <li class="menu-list-item"><a href="#" class="menu-link">Контакты</a></li>    
               </ul>
               </nav>
-            </div>  
+            </div>
+            <a href="/" class="logo-mobile"><img class="image" src="sources/svg/noemi-logo.svg" alt="Логотип" width="270"></a>  
           <h1 class="intro">Блог о творчестве, спорте, и образе жизни</h1>
         </div>
         </header>
@@ -31,7 +35,7 @@
           <div class="trends-container">
             <article class="trends-box trend-pic-first">
               <div class="trends-box-wrapper">
-                <ul class="tag-list">
+                <ul class="trends-tag-list">
                   <li class="tag-list-item"><a href="#" class="tag-link">Lifestyle</a></li>
                   <li class="tag-list-item"><a href="#" class="tag-link">Interior</a></li>
                 </ul>
@@ -40,7 +44,7 @@
             </article>
             <article class="trends-box trend-pic-second">
               <div class="trends-box-wrapper">
-                <ul class="tag-list">
+                <ul class="trends-tag-list">
                   <li class="tag-list-item"><a href="#" class="tag-link">Food</a></li>
                 </ul>
                 <div class="trends-title"><a href="#" class="trends-title-link">Сыры на красивых картинках из интернета: какие они на вкус?</a></div>
@@ -48,7 +52,7 @@
             </article>
             <article class="trends-box trend-pic-third">
               <div class="trends-box-wrapper">
-              <ul class="tag-list">
+              <ul class="trends-tag-list">
                 <li class="tag-list-item"><a href="#" class="tag-link">Lifestyle</a></li>
                 <li class="tag-list-item"><a href="#" class="tag-link">Travel</a></li>
               </ul>
@@ -57,7 +61,7 @@
             </article>
             <article class="trends-box trend-pic-fourth">
               <div class="trends-box-wrapper">
-              <ul class="tag-list">
+              <ul class="trends-tag-list">
                 <li class="tag-list-item"><a href="#" class="tag-link">Food</a></li>
                 <li class="tag-list-item"><a href="#" class="tag-link">Health</a></li>
               </ul>
@@ -217,24 +221,28 @@
               </div>
               </article>
             </section>
-            <section class="aside-section">  
-              <form class="search">
-                <label>
+            <section class="aside-section">
+              <div class="aside-forms">
+                <form class="search-form">
+                  <label class="search-label">
                   <span class="visually-hidden">Поле поиска</span>  
                   <input class="search-field" name="query" placeholder="Найти..." required>
-                </label> 
-                <button class="search-button"><span class="visually-hidden">Кнопка поиска</span>           </button>
-              </form>
+                  </label> 
+                  <button class="search-button"><span class="visually-hidden">Кнопка поиска</span></button>
+                </form>
+              </div>  
             </section>
             <section class="aside-section">
               <h3 class="aside-header">Рассылка</h3>
-              <form class="subscription">
-                    <label>
-                        <span class="visually-hidden">Подписка на рассылку</span>
-                        <input class="subscription-field" placeholder="Ваш email-адрес" type="email" required>
-                    </label>
-                    <button class="subscription-button">Подписаться</button>
-              </form>
+              <div class="aside-forms">
+                <form class="subscription">
+                  <label>
+                    <span class="visually-hidden">Подписка на рассылку</span>
+                    <input class="subscription-field" placeholder="Ваш email-адрес" type="email" required>
+                  </label>
+                  <button class="subscription-button">Подписаться</button>
+                </form>
+              </div>
             </section>  
             <section class="aside-section">
               <h3 class="aside-header">Теги</h3>
@@ -266,9 +274,15 @@
       <aside class="shop">
         <h3 class="section-header">Наши изделия</h3>
         <div class="products">
+          <div class="product-wrapper">
          <article class="product">
           <div class="product-pic">
-            <img src="sources/img/shop-item-desk1.jpg" alt="" class="image" width="100%">
+            <picture>
+              <source media="(max-width: 640px)" srcset="sources/img/shop-item-mobile1.jpg">
+              <source media="(min-width: 641px) and (max-width: 1199px)" srcset="sources/img/shop-item-tablet1.jpg">
+              <source media="(min-width: 1200px)" srcset="sources/img/shop-item-desk1.jpg">
+              <img src="sources/img/shop-item-desk1.jpg" alt="" class="image" width="100%">
+            </picture>
           </div>
           <div class="product-body">
             <div class="product-content">
@@ -288,9 +302,16 @@
             </footer>
           </div>
           </article>
+        </div>
+        <div class="product-wrapper">
           <article class="product">
           <div class="product-pic">
-            <img src="sources/img/shop-item-desk2.jpg" alt="" class="image" width="100%">
+            <picture>
+              <source media="(max-width: 640px)" srcset="sources/img/shop-item-mobile2.jpg">
+              <source media="(min-width: 641px) and (max-width: 1199px)" srcset="sources/img/shop-item-tablet2.jpg">
+              <source media="(min-width: 1200px)" srcset="sources/img/shop-item-desk2.jpg">
+              <img src="sources/img/shop-item-desk2.jpg" alt="" class="image" width="100%">
+            </picture>
           </div>
           <div class="product-body">
             <div class="product-content">
@@ -309,9 +330,16 @@
             </footer>
           </div>
           </article>
+        </div>
+        <div class="product-wrapper">
           <article class="product">
           <div class="product-pic">
-            <img src="sources/img/shop-item-desk3.jpg" alt="" class="image" width="100%">
+            <picture>
+              <source media="(max-width: 640px)" srcset="sources/img/shop-item-mobile3.jpg">
+              <source media="(min-width: 641px) and (max-width: 1199px)" srcset="sources/img/shop-item-tablet3.jpg">
+              <source media="(min-width: 1200px)" srcset="sources/img/shop-item-desk3.jpg">
+              <img src="sources/img/shop-item-desk3.jpg" alt="" class="image" width="100%">
+            </picture>
           </div>
           <div class="product-body">
             <div class="product-content">
@@ -333,6 +361,7 @@
             </footer>
           </div>
           </article>
+        </div>  
       </div>
       </aside>
       <footer class="footer">
