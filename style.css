@@ -1,4 +1,4 @@
-/*====== COMMON ======*/
+/*================================== COMMON ==================================*/
 
 * {
   margin: 0;
@@ -31,12 +31,32 @@
   display: block;
 }
 
-/*====== MOBILE ======*/
+/*========================================= MEDIA =========================================*/
+
+/*================================== MOBILE ==================================*/
 
 @media (max-width: 640px) {
 
+/*=== MOBILE HEADER ===*/
+
   .header {
     padding: 31px 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("sources/img/banner-mobile.jpg");
+    position: relative;
+  }
+
+  .header::after {
+    content: "";
+    background-color: #000000;
+    position: absolute;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 
   .header-wrapper {
@@ -50,8 +70,10 @@
   .logo-mobile {
     display: block;
     width: 330px;
-    padding:  0 30px;
+    padding: 0 30px;
     margin-top: 174px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .main-header {
@@ -65,10 +87,12 @@
   .intro {
     font-size: 26px;
     line-height: 1.4;
-    padding:  0 30px;
+    padding: 0 30px;
     margin-top: 45px;
     margin-bottom: 220px;
   }
+
+  /*=== MOBILE TRENDS ===*/
 
   .trends {
     margin: 45px 0;
@@ -81,7 +105,6 @@
 
   .trends-container {
     flex-direction: column;
-
   }
 
   .trends-box {
@@ -89,6 +112,12 @@
     margin-bottom: 4px;
     min-height: 230px;
   }
+
+  .trends-title {
+    font-size: 16px;
+  }
+
+  /*=== MOBILE MAIN ===*/
 
   .page-content-wrapper {
     padding: 0 15px;
@@ -106,6 +135,11 @@
     margin-bottom: 40px;
   }
 
+  .article-image {
+    width: 100%;
+    max-width: 381px;
+  }
+
   .article-header {
     margin-bottom: 25px;
     font-size: 16px;
@@ -116,7 +150,7 @@
     margin-top: 25px;
     margin-bottom: 25px;
   }
-  
+
   .tag-list {
     margin-top: 15px;
   }
@@ -128,6 +162,8 @@
   .latest-posts-box {
     width: 100%;
   }
+
+  /*=== MOBILE SHOP ===*/
 
   .shop {
     padding: 0 36px;
@@ -145,17 +181,86 @@
     margin: 0 auto;
   }
 
+  /*=== MOBILE FOOTER ===*/
+
   .footer {
     padding: 0 15px;
   }
 
+  .address {
+    margin-bottom: 35px;
+  }
+
+  /*=== MOBILE POPUP ===*/
+
+  .popup-container {
+    width: 91.67%;
+    max-width: 390px;
+    padding: 30px 25px;
+  }
+
+  .popup-header {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .popup-close {
+    background: url("sources/svg/form-x.svg");
+    background-repeat: no-repeat;
+    background-size: 25px;
+    width: 25px;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: -33px;
+  }
 }
-/*====== TABLET ======*/
+
+@media (max-width: 640px) and (orientation: landscape) {
+
+/*=== MOBILE TRENDS ===*/
+
+  .trends-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .trends-box {
+    width: calc(50% - 2px);
+    margin-bottom: 4px;
+    min-height: 247px;
+  }
+
+  .trends-box:nth-child(2n-1) {
+    margin-right: 4px;
+  }
+}
+/*================================== TABLET ==================================*/
 
 @media (min-width: 641px) and (max-width: 1199px) {
 
+/*=== TABLET HEADER ===*/
+
   .header {
-    padding: 35px;
+    padding: 43px 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("sources/img/banner-bg-tablet.jpg");
+    position: relative;
+  }
+
+  .header::after {
+    content: "";
+    background-color: #000000;
+    position: absolute;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 
   .header-wrapper {
@@ -164,13 +269,12 @@
 
   .logo {
     display: block;
-    width: 180px;
+    width: 158px;
   }
 
   .main-header {
     justify-content: space-between;
   }
-
 
   .logo-mobile {
     display: none;
@@ -187,15 +291,16 @@
     padding-bottom: 93px;
   }
 
+  /*=== TABLET TRENDS ===*/
+
   .trends {
     margin-top: 60px;
     margin-bottom: 60px;
   }
 
   .section-header {
-    margin-bottom: 33px;
-    font-size: 20px;
-
+    margin-bottom: 20px;
+    font-size: 18px;
   }
 
   .trends-container {
@@ -203,24 +308,20 @@
   }
 
   .trends-box {
-    width: 49%;
+    width: calc(50% - 2px);
     margin-bottom: 4px;
     min-height: 247px;
   }
 
-  .trends-box {
-    min-height: 246px;
+  .trends-box:nth-child(2n-1) {
+    margin-right: 4px;
   }
 
   .trends-title {
     font-size: 17px;
   }
 
-  .article {
-    flex-direction: column;
-    border-bottom: 3px solid #eeeeee;
-    margin-bottom: 40px;
-  }
+  /*=== TABLET MAIN ===*/
 
   .page-content-wrapper {
     padding: 0 35px;
@@ -229,6 +330,23 @@
 
   main {
     margin-right: 5.02%;
+  }
+
+  .article {
+    flex-direction: column;
+    border-bottom: 3px solid #eeeeee;
+    margin-bottom: 40px;
+  }
+
+  .article-header {
+    margin-bottom: 25px;
+    font-size: 17px;
+    line-height: 1.3;
+  }
+
+  .article-image {
+    width: 100%;
+    max-width: 381px;
   }
 
   .article-text {
@@ -248,6 +366,8 @@
     width: 272px;
   }
 
+  /*=== TABLET SHOP ===*/
+
   .shop {
     padding: 0 35px;
   }
@@ -258,19 +378,71 @@
     margin-right: 4.95%;
   }
 
+  .product-header {
+    margin-bottom: 10px;
+    font-size: 17px;
+    line-height: 1.3;
+  }
+
+  /*=== TABLET FOOTER ===*/
+
   .footer {
     padding: 0 35px;
   }
 
+  .address {
+    margin-bottom: 74px;
+  }
+
+  /*=== TABLET POPUP ===*/
+
+  .popup-container {
+    width: 390px;
+    padding: 54px 30px;
+  }
+
+  .popup-header {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .popup-close {
+    background: url("sources/svg/form-x.svg");
+    background-repeat: no-repeat;
+    background-size: 25px;
+    width: 25px;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: -33px;
+  }
 }
 
-
-/*====== DESKTOP ======*/
+/*================================== DESKTOP ==================================*/
 
 @media (min-width: 1200px) {
+  
+  /*=== DESKTOP HEADER ===*/
 
   .header {
     padding: 35px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("sources/img/banner-bg.jpg");
+    position: relative;
+  }
+
+  .header::after {
+    content: "";
+    background-color: #000000;
+    position: absolute;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 
   .header-wrapper {
@@ -305,7 +477,9 @@
     padding-top: 93px;
     padding-bottom: 93px;
   }
- 
+
+  /*=== DESKTOP TRENDS ===*/
+
   .trends {
     margin-top: 60px;
     margin-bottom: 60px;
@@ -321,6 +495,10 @@
     min-height: 320px;
   }
 
+  .trends-box:not(:last-child) {
+    margin-right: 4px;
+  }
+
   .trends-title {
     font-size: 20px;
   }
@@ -332,6 +510,14 @@
 
   .article {
     margin-bottom: 55px;
+  }
+
+  .article-pic {
+    margin-right: 30px;
+  }
+
+  .article-image {
+    width: 381px;
   }
 
   .article-header {
@@ -352,6 +538,8 @@
     width: 272px;
   }
 
+  /*=== DESKTOP SHOP ===*/
+
   .shop {
     padding: 0 15px;
   }
@@ -359,33 +547,57 @@
   .product-wrapper {
     width: 26.6%;
     margin-left: 2%;
-    margin-right: 2%; 
+    margin-right: 2%;
   }
+
+  .product-header {
+    margin-bottom: 14px;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  /*=== DESKTOP FOOTER ===*/
 
   .footer {
     padding: 0 15px;
   }
 
+  .address {
+    margin-bottom: 74px;
+  }
+
+  /*=== DESKTOP POPUP ===*/
+
+  .popup-container {
+    width: 390px;
+    padding: 54px 30px;
+  }
+
+  .popup-header {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .popup-close {
+    background: url("sources/svg/form-x.svg");
+    background-repeat: no-repeat;
+    background-size: 18px;
+    width: 18px;
+    height: 18px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: -25px;
+  }
 }
-/*====== HEADER ======*/
+
+/*========================================= END MEDIA =========================================*/
+
+/*================================== HEADER ==================================*/
 
 .header {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("sources/img/banner-bg.jpg");
   background-color: #000000;
-  position: relative;
-}
-
-.header::after {
-  content: "";
-  background-color: #000000;
-  position: absolute;
-  opacity: 0.6;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 .header-wrapper {
@@ -429,7 +641,8 @@
   cursor: pointer;
 }
 
-.menu-button::before, .menu-button::after {
+.menu-button::before,
+.menu-button::after {
   content: "";
   width: 100%;
   height: 20%;
@@ -469,7 +682,7 @@
   margin-right: auto;
 }
 
-/*====== TRENDS ======*/
+/*================================== TRENDS ==================================*/
 
 .section-header {
   color: black;
@@ -499,8 +712,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-repeat: no-repeat;
-  background-size: cover;
   background-color: #eff6f1;
 }
 
@@ -523,24 +734,28 @@
   padding: 37px 34px;
 }
 
-.trends-box:not(:last-child) {
-  margin-right: 4px;
-}
-
 .trend-pic-first {
   background-image: url("sources/img/trend1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .trend-pic-second {
   background-image: url("sources/img/trend2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .trend-pic-third {
   background-image: url("sources/img/trend3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .trend-pic-fourth {
   background-image: url("sources/img/trend4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .trends-title {
@@ -567,8 +782,7 @@
   margin-bottom: 15px;
 }
 
-
-/*====== MAIN ======*/
+/*================================== MAIN ==================================*/
 
 .page-content {
   margin: 64px 0;
@@ -590,10 +804,6 @@
 
 .article:last-child {
   margin-bottom: 0;
-}
-
-.article-pic {
-  margin-right: 30px;
 }
 
 .tag-list {
@@ -879,7 +1089,7 @@
   vertical-align: super;
 }
 
-/*====== SHOP ======*/
+/*================================== SHOP ==================================*/
 
 .shop {
   max-width: 1200px;
@@ -910,7 +1120,7 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  padding-bottom: 43px;
+  padding-bottom: 25px;
   flex-grow: 1;
 }
 
@@ -922,7 +1132,8 @@
   outline-offset: 20px;
   top: -23px;
   position: absolute;
-} 
+  z-index: -1;
+}
 
 .product-content {
   padding-top: 20px;
@@ -931,13 +1142,11 @@
 .product-pic {
   margin-left: auto;
   margin-right: auto;
+  z-index: -2;
 }
 
 .product-header {
-  margin-bottom: 14px;
   font-family: Open-Sans, sans-serif;
-  font-size: 20px;
-  line-height: 1.2;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -962,15 +1171,6 @@
 .product-prices {
   display: flex;
   flex-direction: column;
-}
-.product-header-link {
-  color: black;
-  text-decoration: none;
-}
-
-.product-header-link:hover {
-  color: #b59f5b;
-  text-decoration: none;
 }
 
 .product-description {
@@ -1021,7 +1221,8 @@
 .product-button:hover {
   background-color: #323232;
 }
-/*====== FOOTER ======*/
+
+/*================================== FOOTER ==================================*/
 
 .footer {
   max-width: 1200px;
@@ -1033,7 +1234,6 @@
 }
 
 .address {
-  margin-bottom: 74px;
   background-color: #f4f7f6;
   padding: 31px 0;
 }
@@ -1094,4 +1294,149 @@
 .copyright-link {
   color: #999999;
   text-decoration: none;
+}
+
+/*================================== POPUP ==================================*/
+
+.popup {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  z-index: 9999;
+}
+
+.popup-container {
+  margin: auto;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.popup-header {
+  color: black;
+  font-family: Open-Sans, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.popup-header::after {
+  content: "";
+  display: block;
+  margin: 5px auto 0;
+  background-color: #b59f5b;
+  opacity: 0.4;
+  width: 66px;
+  height: 3px;
+}
+
+.popup-paragraph {
+  font-family: Open-Sans, sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.survey {
+  margin-bottom: 35px;
+}
+
+.popup-field {
+  width: 100%;
+  border: none;
+  background-color: #f4f7f6;
+  font-family: Open-Sans, sans-serif;
+  font-size: 13px;
+
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.popup-field:focus {
+  border: 1px solid #b59f5b;
+  outline: none;
+}
+
+.wish-field {
+  padding: 25px 18px;
+  height: 130px;
+  resize: none;
+}
+
+.select-field {
+  padding: 5px 18px;
+  height: 48px;
+  background-image: url("/sources/svg/form-arrows.svg");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.popup-radio:not(:last-child) {
+  margin-right: 15px;
+}
+
+.radio {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+}
+
+.radio-text {
+  font-family: Open-Sans, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.radio-text::before {
+  content: "";
+  margin-right: 5px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  background-image: url("sources/svg/form-empty-circle.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 20px;
+}
+
+.radio:checked ~ .radio-text::before {
+  background-image: url("sources/svg/form-circle.svg");
+}
+
+.popup-button {
+  width: 100%;
+  height: 48px;
+  border: none;
+  background-color: #b59f5b;
+  color: white;
+  font-family: Open-Sans, sans-serif;
+  font-size: 14px;
+  line-height: 2.8;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+}
+
+.popup-button:hover {
+  background-color: #323232;
+}
+
+.hidden {
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
 }
