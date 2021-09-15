@@ -64,20 +64,57 @@
   }
 
   .logo {
-    display: none;
-  }
-
-  .logo-mobile {
     display: block;
-    width: 330px;
-    padding: 0 30px;
+    width: 270px;
     margin-top: 174px;
-    margin-left: auto;
-    margin-right: auto;
+
   }
 
   .main-header {
-    justify-content: flex-end;
+    justify-content: center;
+  }
+
+  .menu-button {
+    top: 10px;
+    right: 0;
+    width: 1em;
+    height: 0.4em;
+    border: none;
+    background-color: transparent;
+    font-size: 25px;
+    position: absolute;
+    text-indent: -9999px;
+    cursor: pointer;
+  }
+  
+  .menu-button::before,
+  .menu-button::after {
+    content: "";
+    width: 100%;
+    height: 20%;
+    border-radius: 5px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+  }
+  
+  .menu-button::before {
+    top: 0;
+  }
+  
+  .menu-button::after {
+    bottom: 0;
+  }
+  
+  .menu-button-label {
+    width: 100%;
+    height: 20%;
+    margin-top: -0.54em;
+    border-radius: 5px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 50%;
   }
 
   .menu-list {
@@ -244,7 +281,7 @@
 /*=== TABLET HEADER ===*/
 
   .header {
-    padding: 43px 20px;
+    padding: 43px 20px 136px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -276,8 +313,45 @@
     justify-content: space-between;
   }
 
-  .logo-mobile {
-    display: none;
+  .menu-button {
+    width: 1em;
+    height: 0.4em;
+    border: none;
+    background-color: transparent;
+    font-size: 25px;
+    position: relative;
+    text-indent: -9999px;
+    cursor: pointer;
+  }
+  
+  .menu-button::before,
+  .menu-button::after {
+    content: "";
+    width: 100%;
+    height: 20%;
+    border-radius: 5px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+  }
+  
+  .menu-button::before {
+    top: 0;
+  }
+  
+  .menu-button::after {
+    bottom: 0;
+  }
+  
+  .menu-button-label {
+    width: 100%;
+    height: 20%;
+    margin-top: -0.54em;
+    border-radius: 5px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 50%;
   }
 
   .menu-list {
@@ -287,8 +361,7 @@
   .intro {
     font-size: 40px;
     line-height: 1.4;
-    padding-top: 93px;
-    padding-bottom: 93px;
+    margin-top: 93px;
   }
 
   /*=== TABLET TRENDS ===*/
@@ -427,7 +500,7 @@
   /*=== DESKTOP HEADER ===*/
 
   .header {
-    padding: 35px;
+    padding: 35px 35px 128px;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("sources/img/banner-bg.jpg");
@@ -474,8 +547,7 @@
   .intro {
     font-size: 45px;
     line-height: 1.7;
-    padding-top: 93px;
-    padding-bottom: 93px;
+    margin-top: 93px;
   }
 
   /*=== DESKTOP TRENDS ===*/
@@ -612,9 +684,8 @@
   align-items: center;
 }
 
-.menu-list-item {
-  margin-left: 16px;
-  margin-right: 16px;
+.menu-list-item:not(:last-child) {
+  margin-right: 32px;
 }
 
 .menu-link {
@@ -627,48 +698,6 @@
 
 .menu-link:hover {
   text-decoration: underline;
-}
-
-.menu-button {
-  width: 1em;
-  height: 0.4em;
-  border: none;
-  padding: 0;
-  background-color: transparent;
-  font-size: 25px;
-  position: relative;
-  text-indent: -9999px;
-  cursor: pointer;
-}
-
-.menu-button::before,
-.menu-button::after {
-  content: "";
-  width: 100%;
-  height: 20%;
-  border-radius: 5px;
-  background-color: #ffffff;
-  position: absolute;
-  left: 0;
-}
-
-.menu-button::before {
-  top: 0;
-}
-
-.menu-button::after {
-  bottom: 0;
-}
-
-.menu-button-label {
-  width: 100%;
-  height: 20%;
-  margin-top: -0.54em;
-  border-radius: 5px;
-  background-color: #ffffff;
-  position: absolute;
-  left: 0;
-  top: 50%;
 }
 
 .intro {
@@ -1228,7 +1257,7 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
   display: flex;
   flex-direction: column;
 }
@@ -1245,9 +1274,8 @@
   align-items: center;
 }
 
-.socials-list-item {
-  margin-right: 14px;
-  margin-left: 14px;
+.socials-list-item:not(:last-child) {
+  margin-right: 28px;
 }
 
 .socials-pic {
