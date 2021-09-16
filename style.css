@@ -40,7 +40,7 @@
 /*=== MOBILE HEADER ===*/
 
   .header {
-    padding: 31px 15px;
+    padding: 31px 15px 251px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -126,7 +126,6 @@
     line-height: 1.4;
     padding: 0 25px;
     margin-top: 45px;
-    margin-bottom: 220px;
   }
 
   /*=== MOBILE TRENDS ===*/
@@ -529,10 +528,6 @@
 
   .main-header {
     justify-content: space-between;
-  }
-
-  .logo-mobile {
-    display: none;
   }
 
   .menu-list {
@@ -975,7 +970,6 @@
 
 .aside-forms {
   margin: 0 auto;
-  max-width: 320px;
 }
 
 .search-form {
@@ -984,7 +978,7 @@
 }
 
 .search-label {
-  width: 85.45%;
+  width: calc(100% - 48px);
 }
 
 .search-field {
@@ -1094,13 +1088,13 @@
 
 .categories-list-item {
   border-bottom: 1px solid #eeeeee;
+  padding-bottom: 10px;
 }
 
 .categories-link {
   color: black;
   font-family: Open-Sans, sans-serif;
   font-size: 14px;
-  line-height: 3.3;
   font-weight: bold;
   text-decoration: none;
 }
